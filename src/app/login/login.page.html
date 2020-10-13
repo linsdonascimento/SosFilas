@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="/assets/img/SosFilas-v-removebg.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h4 class="custom-title">Bem Vindo! Faça o seu Login</h4>
+    <div class="container-buttons">
+      
+
+        <ion-item class="bg-transparente">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
+        </ion-item>
+          
+        <ion-item class="bg-transparente">
+            <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.senha"></ion-input>
+            </ion-item>
+        
+        <ion-row>
+          <ion-button class="login" (click)="login()"> Login </ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label class="btn1" (click)="newUsuario()">Não tem conta? Cadastre-se.</ion-label>
+          </ion-col>
+          
+        </ion-row>
+      
+    </div>
+
+</ion-content>

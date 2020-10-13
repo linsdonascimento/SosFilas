@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "db-consulta": {
+      "hosting": {
+        "app": [
+          "db-consulta"
+        ]
+      }
+    }
+  }
+}

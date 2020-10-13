@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><img src="/assets/img/SosFilas-v-removebg.png">
+      Cadastro 
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="backToLogin()">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-item class="bg-transparente">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="CadastroUser.nome"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparente">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="CadastroUser.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparente">
+        <ion-label position="floating">Digite uma Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="CadastroUser.senha"></ion-input>
+      </ion-item>
+
+      
+
+  </div>
+    <ion-row>
+      <ion-button (click)="salvar()"> Salvar </ion-button>
+    </ion-row>
+
+</ion-content>

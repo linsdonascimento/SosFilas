@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> <img src="/assets/img/SosFilas-v-removebg.png">
+      Ficha Listada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <div *ngIf="!loading">
+        <ion-card *ngFor="let Ficha of ListaFicha">
+          <ion-item>
+          <ion-icon (click)="remove(Ficha.uid)" color="danger" name="trash" slot="end"></ion-icon>
+            <ion-label>{{ Ficha.nome }}</ion-label>
+          </ion-item>
+  
+          <ion-card-content>
+           <ion-item lines="none">Resolver: {{ Ficha.resolver }}</ion-item>
+           <ion-item lines="none">Data: {{ Ficha.data}}</ion-item>
+           <ion-item lines="none">Horario: {{ Ficha.horario }}</ion-item>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+</ion-content>

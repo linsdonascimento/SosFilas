@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><img src="/assets/img/SosFilas-v-removebg.png">
+      ficha
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="ion-margin-top" lines="none">
+    <ion-input type="text" placeholder="Nome" [(ngModel)]="fichas.nome"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top" lines="none">
+    <ion-input type="text" placeholder="O que deseja Fazer?" [(ngModel)]="fichas.resolver"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top" lines="none">
+    <ion-input type="text" placeholder="Data" [(ngModel)]="fichas.data"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top" lines="none">
+    <ion-input type="text" placeholder="HOrário" [(ngModel)]="fichas.horario"></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-margin-top" (click)="confirma()" color="light" expand="block">
+    Confirmar
+  </ion-button>
+
+</ion-content>

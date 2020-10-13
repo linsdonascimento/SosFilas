@@ -1,0 +1,7 @@
+{
+  "name": "SosFicha",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

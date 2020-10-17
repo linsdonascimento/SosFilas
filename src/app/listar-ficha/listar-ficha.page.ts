@@ -4,6 +4,7 @@ import { LoadingController, ModalController, ToastController } from '@ionic/angu
 import { DBService } from '../database/db.sosficha';
 import { FichaPage } from '../ficha/ficha.page';
 import { ficha } from '../module/Ficha';
+import { usuario } from '../module/usuario';
 
 @Component({
   selector: 'app-listar-ficha',
@@ -17,6 +18,7 @@ export class ListarFichaPage implements OnInit {
   carregando = true;
   loading: any;
   Ficha: ficha;
+  user: usuario
 
   constructor(
       public Router: Router,
@@ -26,6 +28,7 @@ export class ListarFichaPage implements OnInit {
       private toastCtrl: ToastController,
   ) { 
     this.Ficha= new ficha;
+    this.user = new usuario;
   }
 
   async ngOnInit() {
@@ -84,9 +87,9 @@ export class ListarFichaPage implements OnInit {
   }
 
   Confirmar() {
-    this.Ficha = new ficha;
-    this.Router.navigate(['/ficha']);
-    this.presentToast('Usuario Cadastrado com sucesso');
+    this.user = new usuario;
+    this.Router.navigate(['/login']);
+    this.presentToast('Obrigado');
   }
   
   
